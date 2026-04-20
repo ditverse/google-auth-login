@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — AuthApp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dashboard-page">
+
+  <main class="dashboard-wrapper">
+
+    <!-- Banner Profil -->
+    <div class="card profile-banner fade-up d-1">
+      <img id="user-avatar" class="profile-banner__avatar" src="" alt="Foto Profil" />
+      <div class="profile-banner__info">
+        <p class="profile-banner__name" id="user-name">—</p>
+        <div class="profile-banner__status">
+          <span class="status-dot"></span>
+          Sesi Aktif
+        </div>
+      </div>
+      <span class="profile-banner__email" id="user-email">—</span>
+    </div>
+
+    <!-- Card Info Akun -->
+    <div class="card info-card fade-up d-2">
+      <p class="info-card__title">Informasi Akun</p>
+
+      <div class="card__row">
+        <span class="card__row-label">Email</span>
+        <span class="card__row-value" id="detail-email">—</span>
+      </div>
+      <div class="card__row">
+        <span class="card__row-label">Nama</span>
+        <span class="card__row-value" id="detail-name">—</span>
+      </div>
+      <div class="card__row">
+        <span class="card__row-label">Status</span>
+        <span class="card__row-value">Terverifikasi Google</span>
+      </div>
+      <div class="card__row">
+        <span class="card__row-label">Sesi Dimulai</span>
+        <span class="card__row-value" id="detail-session">—</span>
+      </div>
+
+      <button id="logout-btn" class="btn btn--blue">Keluar</button>
+    </div>
+
+  </main>
+
+  <script type="module" src="dashboard.js"></script>
+
+</body>
+</html>

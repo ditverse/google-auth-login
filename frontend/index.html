@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Masuk — AuthApp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+
+  <div class="login-card fade-up">
+
+    <div class="login-card__header">
+      <span class="login-card__brand">AuthApp</span>
+      <h1 class="login-card__title">Selamat datang</h1>
+      <p class="login-card__subtitle">Masuk dengan akun Google Anda untuk melanjutkan</p>
+    </div>
+
+    <div class="login-card__divider">
+      <span class="login-card__divider-line"></span>
+      <span class="login-card__divider-text">masuk dengan</span>
+      <span class="login-card__divider-line"></span>
+    </div>
+
+    <div id="g_id_onload"
+      data-client_id="680578954798-5j5mmi55ukmdpij3kk92iak96t829l67.apps.googleusercontent.com"
+      data-callback="handleCredentialResponse"
+      data-auto_prompt="false">
+    </div>
+    <div class="g_id_signin"
+      data-type="standard"
+      data-size="large"
+      data-theme="outline"
+      data-text="sign_in_with"
+      data-shape="rectangular"
+      data-logo_alignment="left">
+    </div>
+
+    <p id="error-msg" class="login-card__error"></p>
+
+    <p class="login-card__note">Dengan masuk, Anda menyetujui Kebijakan Privasi.</p>
+
+  </div>
+
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script type="module" src="index.js"></script>
+
+</body>
+</html>
