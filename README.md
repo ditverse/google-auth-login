@@ -11,6 +11,32 @@ Aplikasi web sederhana untuk autentikasi menggunakan Google Sign-In. Dibangun de
 - Proteksi halaman — redirect otomatis jika belum/sudah login
 - Logout dan hapus sesi
 
+## Diagram Alur
+
+```mermaid
+sequenceDiagram
+    actor User
+    participant Frontend
+    participant Backend (Go)
+    participant Google API
+
+    User->>Frontend: Klik "Sign in with Google"
+    Frontend->>Google API: Tampilkan popup login
+    Google API-->>Frontend: Kirim ID Token (JWT)
+
+    Frontend->>Backend (Go): POST /auth/google { token }
+    Backend (Go)->>Google API: GET /tokeninfo?id_token=...
+    Google API-->>Backend (Go): { name, email, picture }
+    Backend (Go)-->>Frontend: 200 OK { name, email, picture }
+
+    Frontend->>Frontend: Simpan sesi ke cookie
+    Frontend->>Frontend: Redirect ke dashboard.html
+
+    User->>Frontend: Klik "Keluar"
+    Frontend->>Frontend: Hapus cookie
+    Frontend->>Frontend: Redirect ke index.html
+```
+
 ## Struktur Project
 
 ```
