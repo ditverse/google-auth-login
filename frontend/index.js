@@ -3,7 +3,7 @@ import { redirect } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.8/url.js";
 import { setInnerText, show } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.8/element.js";
 
 // Ganti dengan URL backend; kosongkan ("") untuk mode demo tanpa backend
-const BACKEND_URL = "http://localhost:8080";
+const BACKEND_URL = "https://github.com/ditverse/google-auth-login.git";
 
 // Redirect ke dashboard jika sudah punya sesi
 if (getCookie("user_name") !== "") {
