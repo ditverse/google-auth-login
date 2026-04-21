@@ -3,7 +3,7 @@ import { redirect } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.8/url.js";
 import { setInnerText, show } from "https://cdn.jsdelivr.net/gh/jscroot/lib@0.2.8/element.js";
 
 // Ganti dengan URL backend; kosongkan ("") untuk mode demo tanpa backend
-const BACKEND_URL = "https://innocent-combine-fuj.sgp.dom.my.id";
+const BACKEND_URL = "https://praktikum-google-login-auth";
 
 // Redirect ke dashboard jika sudah punya sesi
 if (getCookie("user_name") !== "") {
